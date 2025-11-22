@@ -124,6 +124,36 @@
 
 
   </head>
+  <script>
+$('#diabetesVideoModal').on('hidden.bs.modal', function () {
+    document.getElementById('diabetesVideo').pause();
+});
+</script>
+
+  <!-- Diabetes Video Modal -->
+<div class="modal fade" id="diabetesVideoModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Diabetes Prediction Web App - Demo Video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                onclick="document.getElementById('diabetesVideo').pause();">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <video id="diabetesVideo" width="100%" controls>
+          <source src="asssets/videos/Diabetes Demo.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+    </div>
+  </div>
+</div>
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
@@ -433,16 +463,31 @@
 			  </div>
 			</div>
 			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Laxmi249/Diabetes-Prediction/blob/main/app.py" class="block-20 zoom-effect" style="background-image: url('images/DP.png');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Laxmi249/Diabetes-Prediction/blob/main/app.py">Diabetes Prediction Web App</a></h3>
-				  <p>Developed a web application to predict the likelihood of diabetes based on user input using machine learning models. The app provides real-time predictions and health recommendations to users for diabetes prevention..</p>
-				</div>
-			  </div>
-			</div>
+  <div class="blog-entry justify-content-end">
+
+    <!-- THUMBNAIL (Click to Play Video) -->
+    <a href="#" class="block-20 zoom-effect" data-toggle="modal" data-target="#diabetesVideoModal"
+       style="background-image: url('images/DP.png');">
+    </a>
+
+    <div class="text mt-3 float-right d-block">
+      <h3 class="heading">
+        <a href="https://github.com/Laxmi249/Diabetes-Prediction/blob/main/app.py">
+          Diabetes Prediction Web App
+        </a>
+      </h3>
+      <p>
+        Designed and deployed a smart web application capable of predicting diabetes risk based on user health metrics using ML models. The platform offers real-time predictions, a seamless interface, and practical insights for better health awareness. 
+<br>
+<span style="color:#ffbd39; font-weight:bold;">
+    Click the thumbnail to watch the detailed demo video.
+</span>
+
+      </p>
+    </div>
+  </div>
+</div>
+
 			<div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
               <a href="https://github.com/Laxmi249/Road-Accident-Dashboard-Tableau/blob/main/RoadAccident/RoadAccident.twbx" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
@@ -456,6 +501,7 @@
           </div>
 		 </div>
 	  </div>
+</div>
     </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
